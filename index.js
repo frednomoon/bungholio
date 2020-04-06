@@ -32,7 +32,7 @@ async function sendSMS(item) {
 async function run() {
   console.log("")
   console.log(`Starting at ${moment().toISOString()}`)
-  const browser = await puppeteer.launch()
+  const browser = await puppeteer.launch({ args: ["--no-sandbox"] })
 
   const page = await browser.newPage()
 
